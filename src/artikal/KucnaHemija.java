@@ -11,6 +11,9 @@ public class KucnaHemija extends Artikal {
 	}
 
 	public void setRokTrajanja(Date rokTrajanja) {
+		if(rokTrajanja==null) {
+			throw new RuntimeException("Datum nije pravilno upisan");
+		}
 		this.rokTrajanja = rokTrajanja;
 	}
 
