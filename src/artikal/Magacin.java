@@ -13,7 +13,7 @@ public class Magacin implements InterfaceMagacin {
 	@Override
 	public void dodajArtikal(Artikal artikal) {
 
-		if(artikal!=null) {
+		if(artikal!=null && !(artikli.contains(artikal))) {
 		artikli.add(artikal);
 		}
 
@@ -22,7 +22,7 @@ public class Magacin implements InterfaceMagacin {
 	@Override
 	public void izbaciArtikal(Artikal artikal) {
 
-		if(artikal!=null) {
+		if(artikal!=null && artikli.contains(artikal)) {
 		artikli.remove(artikal);
 		}
 
